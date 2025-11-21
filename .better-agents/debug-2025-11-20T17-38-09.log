@@ -1,0 +1,10 @@
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289994,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"timer-end","label":"project-structure","duration":3}
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289994,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"timer-start","label":"framework-setup"}
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289994,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"timer-end","label":"framework-setup","duration":0}
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289994,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"timer-start","label":"mcp-config"}
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289994,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"timer-end","label":"mcp-config","duration":0}
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289994,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"timer-start","label":"agents-guide"}
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289995,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"timer-end","label":"agents-guide","duration":1}
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289995,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"user-success","message":"Your agent project is ready!","type":"success"}
+{"level":"debug","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289995,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"user-info","message":"Project location: /Users/rchaves/Desktop/langwatch-flagsmith-demo2","type":"info"}
+{"level":"info","timestamp":"2025-11-20T17:38:09.992Z","time":1763660289995,"pid":32666,"hostname":"ip-192-168-1-40.eu-central-1.compute.internal","step":"init-completed","projectPath":"/Users/rchaves/Desktop/langwatch-flagsmith-demo2","success":true}

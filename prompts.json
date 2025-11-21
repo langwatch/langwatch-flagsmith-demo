@@ -1,0 +1,5 @@
+{
+  "prompts": {
+      "banking_agent": "file:prompts/banking_agent.prompt.yaml"
+  }
+}

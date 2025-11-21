@@ -1,0 +1,32 @@
+{
+  "name": "langwatch-flagsmith-demo2",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.69",
+    "@langwatch/scenario": "^0.3.0",
+    "@mastra/core": "^0.24.3",
+    "@mastra/libsql": "^0.16.2",
+    "@mastra/loggers": "^0.10.19",
+    "@mastra/memory": "^0.15.11",
+    "ai": "^5.0.98",
+    "dotenv": "^17.2.3",
+    "flagsmith-nodejs": "^6.2.0",
+    "langwatch": "^0.8.1",
+    "mastra": "^0.18.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "vitest": "^4.0.12"
+  }
+}

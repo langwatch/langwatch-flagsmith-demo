@@ -1,0 +1,10 @@
+{
+  "lockfileVersion": 1,
+  "prompts": {
+    "banking_agent": {
+      "version": 2,
+      "versionId": "YXhWuA_tu7kJ1eGUQlaZ2",
+      "materialized": "prompts/banking_agent.prompt.yaml"
+    }
+  }
+}
