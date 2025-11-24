@@ -1,3 +1,7 @@
+// Load environment variables first
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { Agent } from '@mastra/core/agent';
 import { openai } from '@ai-sdk/openai';
 import { LangWatch } from 'langwatch';
@@ -12,16 +16,12 @@ const langwatch = new LangWatch({
 // Fetch prompt
 // We use top-level await which is supported in modern Node/bundlers
 // If this fails, the module won't load, which is expected per guidelines
-const promptData = await langwatch.prompts.get('banking_agent', {
-  variables: {
-    customerId: 'cust_123' // Hardcoded for demo purposes
-  }
-});
+const promptData = await langwatch.prompts.get('banking_agent');
 
 export const bankingAgent = new Agent({
   name: 'Banking Assistant',
   instructions: promptData?.prompt || 'You are a banking assistant.',
-  model: openai('gpt-4o'),
+  model: openai('gpt-5-nano'),
   tools: {
       listAccounts: tools.listAccounts, // Added this
       getAccountBalance: tools.getAccountBalance,

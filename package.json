@@ -5,7 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "build": "tsc",
+    "test:api": "./scripts/test-api.sh"
   },
   "keywords": [],
   "author": "",
@@ -13,19 +17,26 @@
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
     "@ai-sdk/openai": "^2.0.69",
+    "@langchain/core": "^1.0.6",
+    "@langchain/openai": "^1.1.2",
     "@langwatch/scenario": "^0.3.0",
     "@mastra/core": "^0.24.3",
     "@mastra/libsql": "^0.16.2",
     "@mastra/loggers": "^0.10.19",
     "@mastra/memory": "^0.15.11",
+    "@mastra/otel-exporter": "^0.3.3",
     "ai": "^5.0.98",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "flagsmith-nodejs": "^6.2.0",
     "langwatch": "^0.8.1",
     "mastra": "^0.18.3",
     "zod": "^4.1.12"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
     "tsx": "^4.20.6",
     "vitest": "^4.0.12"
   }
