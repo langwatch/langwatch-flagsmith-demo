@@ -175,14 +175,6 @@ export const transactionDispute = createTool({
     message: z.string().optional(),
   }),
   execute: async ({ context }) => {
-     const enabled = await isTransactionDisputeEnabled();
-     if (!enabled) {
-         return {
-             status: 'failed',
-             message: 'Transaction dispute feature is currently unavailable.',
-         };
-     }
-
      return {
          status: 'Dispute initiated',
          ticketId: `ticket_${context.transactionId}_${Date.now()}`

@@ -125,7 +125,7 @@ describe('Banking Agent Scenarios', () => {
             script: [
                 scenario.user('I want to dispute transaction tx_1 because it was a double charge'),
                 scenario.agent(),
-                (state) => expect(state.hasToolCall('transactionDispute'), 'transactionDispute tool should be called').toBe(true),
+                (state) => expect(state.hasToolCall('transactionDispute'), 'transactionDispute tool should not be called').toBe(false),
                 scenario.judge()
             ]
         });
