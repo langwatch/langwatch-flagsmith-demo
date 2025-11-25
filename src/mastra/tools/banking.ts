@@ -13,7 +13,6 @@ export const listAccounts = createTool({
     accounts: z.array(z.object({
         id: z.string(),
         type: z.string(),
-        balance: z.number(),
         currency: z.string()
     })),
   }),
@@ -26,7 +25,6 @@ export const listAccounts = createTool({
           accounts: customer.accounts.map(a => ({
               id: a.id,
               type: a.type,
-              balance: a.balance,
               currency: a.currency
           }))
       };

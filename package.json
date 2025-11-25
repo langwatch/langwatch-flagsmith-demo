@@ -5,11 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "dotenv run vitest",
     "dev": "tsx watch src/server.ts",
+    "mastra:dev": "pnpm mastra dev",
     "start": "tsx src/server.ts",
-    "build": "tsc",
-    "test:api": "./scripts/test-api.sh"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",

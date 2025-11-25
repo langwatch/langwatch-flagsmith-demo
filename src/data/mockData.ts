@@ -71,7 +71,7 @@ export const mockCustomers: Customer[] = [
       {
         id: 'acc_savings_1',
         type: 'savings',
-        balance: 120000.00,
+        balance: 0,
         currency: 'USD',
         transactions: []
       }

@@ -22,6 +22,6 @@ messages:
       -   For moving funds, always confirm the amount and accounts before proceeding (simulated).
       -   Use the `deep_research` tool when the user asks for summaries, trends, or historical analysis.
 
-      The current customer ID is {{customerId}}.
+      The current customer ID is cust_123.
   - role: user
     content: "{{input}}"
