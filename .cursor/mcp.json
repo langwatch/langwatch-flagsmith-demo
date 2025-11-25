@@ -14,6 +14,18 @@
         "-y",
         "@mastra/mcp-docs-server"
       ]
+    },
+    "flagsmith": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://app.getgram.ai/mcp/flagsmith-mcp",
+        "--header",
+        "Mcp-Flagsmith-Token-Auth:${MCP_FLAGSMITH_TOKEN_AUTH}"
+      ],
+      "env": {
+        "MCP_FLAGSMITH_TOKEN_AUTH": "<your-value-here>"
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 import { Flagsmith } from 'flagsmith-nodejs';
 
 const flagsmith = new Flagsmith({
-  environmentKey: process.env.FLAGSMITH_SERVER_KEY || 'ser.LqyzrPcXqZb9HLcHy92Zwb',
+  environmentKey: process.env.FLAGSMITH_SECRET_KEY || '',
 });
 
 export const getFlags = async () => {
@@ -19,5 +19,6 @@ export const getFlags = async () => {
 
 export const isTransactionDisputeEnabled = async () => {
     const flags = await getFlags();
+    console.log('Feature Flags Evaluation Result:', flags);
     return flags.isFeatureEnabled('transaction_dispute');
 }

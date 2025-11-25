@@ -1,10 +1,15 @@
+// Load environment variables first
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { Mastra } from '@mastra/core/mastra';
+import { OtelExporter } from "@mastra/otel-exporter";
 import { PinoLogger } from '@mastra/loggers';
 import { LibSQLStore } from '@mastra/libsql';
 import { weatherWorkflow } from './workflows/weather-workflow';
 import { weatherAgent } from './agents/weather-agent';
 import { bankingAgent } from './agents/banking-agent';
-
+import { LangWatchExporter } from "langwatch";
 
 export const mastra = new Mastra({
   workflows: { weatherWorkflow },
@@ -18,11 +23,30 @@ export const mastra = new Mastra({
     level: 'info',
   }),
   telemetry: {
-    // Telemetry is deprecated and will be removed in the Nov 4th release
-    enabled: false,
+    serviceName: "ai", // this must be set to "ai" so that the LangWatchExporter thinks it's an AI SDK trace
+    enabled: true,
+    export: {
+      type: "custom",
+      exporter: new LangWatchExporter({
+        apiKey: process.env.LANGWATCH_API_KEY,
+      }),
+    },
   },
   observability: {
-    // Enables DefaultExporter and CloudExporter for AI tracing
-    default: { enabled: true },
+    configs: {
+      otel: {
+        serviceName: "flagsmith-5DebaO",
+        exporters: [
+          new OtelExporter({
+            provider: {
+              custom: {
+                endpoint: "https://app.langwatch.ai/api/otel/v1/traces",
+                headers: { "Authorization": `Bearer ${process.env.LANGWATCH_API_KEY}` },
+              },
+            },
+          }),
+        ],
+      },
+    },
   },
 });
